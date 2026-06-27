@@ -25,7 +25,9 @@ jobs:
         run: yarn install
 
       - name: Build static site 🏗️
-        run: yarn build
+        run: |
+          yarn build
+          touch out/.nojekyll
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
