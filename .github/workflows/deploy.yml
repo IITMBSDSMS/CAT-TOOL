@@ -22,7 +22,15 @@ jobs:
           node-version: 20
 
       - name: Install dependencies 📦
-        run: npm install --legacy-peer-deps
+        run: |
+          npm install --legacy-peer-deps 2> npm_error.log || true
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git checkout -b debug_logs
+          git add npm_error.log
+          git commit -m "Upload debug logs"
+          git push -f origin debug_logs
+          exit 1
 
       - name: Build static site 🏗️
         run: npm run build
