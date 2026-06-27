@@ -1,0 +1,2 @@
+:HL["/CAT-TOOL/_next/static/chunks/2l6lz1t6bxxkg.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"dashboard","param":null,"prefetchHints":0,"slots":{"children":{"name":"responses","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"R1P7tlHb6d51cKFvuelrU"}
