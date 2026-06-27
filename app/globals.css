@@ -1700,3 +1700,135 @@ body {
   animation: cursor-blink 0.8s step-end infinite;
 }
 
+/* ================================================
+   RESPONSIVE GRID UTILITIES
+   ================================================ */
+.welcome-banner-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .welcome-banner-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+.grid-responsive-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+@media (max-width: 768px) {
+  .grid-responsive-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-responsive-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+@media (max-width: 1024px) {
+  .grid-responsive-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .grid-responsive-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-responsive-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+@media (max-width: 1024px) {
+  .grid-responsive-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .grid-responsive-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-responsive-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-5);
+}
+@media (max-width: 1200px) {
+  .grid-responsive-5 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .grid-responsive-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .grid-responsive-5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-responsive-sidebar {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-6);
+}
+@media (max-width: 1024px) {
+  .grid-responsive-sidebar {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-responsive-sidebar-inverse {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: var(--space-6);
+}
+@media (max-width: 1024px) {
+  .grid-responsive-sidebar-inverse {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-responsive-2fr-1fr {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-6);
+}
+@media (max-width: 1024px) {
+  .grid-responsive-2fr-1fr {
+    grid-template-columns: 1fr;
+  }
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+@media (max-width: 1024px) {
+  .col-span-2 {
+    grid-column: span 1;
+  }
+}
+
+.col-span-3 {
+  grid-column: span 3;
+}
+@media (max-width: 1024px) {
+  .col-span-3 {
+    grid-column: span 1;
+  }
+}
+
+

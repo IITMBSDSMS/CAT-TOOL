@@ -124,10 +124,9 @@ export default function AdminPage() {
         <div className="page-content">
 
           {/* Welcome Banner */}
-          <div style={{
+          <div className="welcome-banner-wrap" style={{
             background: 'linear-gradient(135deg, #07102A 0%, #0D1B3E 60%, #0A6B6B 100%)',
             borderRadius: 'var(--radius-xl)', padding: '28px 36px', marginBottom: 32,
-            display: 'flex', justifyContent: 'space-between', alignItems: 'center',
             position: 'relative', overflow: 'hidden'
           }}>
             <div style={{ position: 'absolute', top: -50, right: 100, width: 180, height: 180, background: 'radial-gradient(circle, rgba(14,140,140,0.25) 0%, transparent 70%)', borderRadius: '50%' }} />
@@ -136,13 +135,13 @@ export default function AdminPage() {
               <h1 style={{ fontSize: 26, fontWeight: 900, color: 'white', letterSpacing: '-0.5px', marginBottom: 6 }}>Welcome, {user.full_name}</h1>
               <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)' }}>National Research Intelligence Dashboard · Real-time insights across all colleges</p>
             </div>
-            <div style={{ display: 'flex', gap: 24, position: 'relative', zIndex: 1 }}>
+            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
               {[
                 { label:'Colleges', value:colleges.length },
                 { label:'Responses', value:totalResponses },
                 { label:'Ambassadors', value:totalAmbassadorsCount },
               ].map(s => (
-                <div key={s.label} style={{ textAlign:'center' }}>
+                <div key={s.label} style={{ textAlign:'center', minWidth: 80 }}>
                   <div style={{ fontSize:36,fontWeight:900,color:'#14B8A6',letterSpacing:-2,lineHeight:1 }}>{s.value}</div>
                   <div style={{ fontSize:11,color:'rgba(255,255,255,0.5)',marginTop:4,fontWeight:600,textTransform:'uppercase',letterSpacing:0.5 }}>{s.label}</div>
                 </div>
@@ -151,7 +150,7 @@ export default function AdminPage() {
           </div>
 
           {/* KPI Cards */}
-          <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(5,1fr)' }}>
+          <div className="kpi-grid">
             <KPICard label="Total Colleges" value={colleges.length} icon={<Building2 size={20} />} iconBg="rgba(14,140,140,0.10)" iconColor="#0E8C8C" trend={8} delay={0} />
             <KPICard label="All Responses" value={totalResponses} icon={<BookOpen size={20} />} iconBg="rgba(37,99,235,0.10)" iconColor="#2563EB" trend={15} delay={100} />
             <KPICard label="Ambassadors" value={totalAmbassadorsCount} icon={<Users size={20} />} iconBg="rgba(5,150,105,0.10)" iconColor="#059669" trend={3} delay={200} />
@@ -160,7 +159,7 @@ export default function AdminPage() {
           </div>
 
           {/* College Comparison + Readiness */}
-          <div style={{ display:'grid',gridTemplateColumns:'1fr 320px',gap:24,marginBottom:24 }}>
+          <div className="grid-responsive-sidebar" style={{ marginBottom:24 }}>
             <div className="chart-card">
               <div className="chart-title"><BarChart3 size={16} color="#0E8C8C" /> College Comparison — Responses</div>
               <ResponsiveContainer width="100%" height={240}>
@@ -218,7 +217,7 @@ export default function AdminPage() {
           </div>
 
           {/* AI Insights + College Table */}
-          <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:24 }}>
+          <div className="grid-responsive-2">
             <div className="insights-panel">
               <div className="insights-header">
                 <Brain size={20} color="#14B8A6" />

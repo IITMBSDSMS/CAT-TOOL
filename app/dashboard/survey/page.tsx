@@ -167,7 +167,7 @@ export default function SurveyPage() {
 
               {/* SECTION 1 */}
               {step === 1 && (
-                <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0 24px' }}>
+                <div className="grid-responsive-2" style={{ gap: '0 24px' }}>
                   <div className="form-group">
                     <label className="form-label">Department <span className="required">*</span></label>
                     <select id="dept-select" className="form-select" value={form.department} onChange={e => setForm(f => ({...f,department:e.target.value}))} required>

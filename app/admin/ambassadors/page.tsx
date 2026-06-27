@@ -102,7 +102,7 @@ export default function AmbassadorsPage() {
                   </div>
                 ) : (
                   <form className="card-body" onSubmit={handleAdd} style={{ display:'flex',flexDirection:'column',gap:0 }}>
-                    <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0 20px' }}>
+                    <div className="grid-responsive-2" style={{ gap: '0 20px' }}>
                       <div className="form-group">
                         <label className="form-label">Full Name <span className="required">*</span></label>
                         <input id="amb-name" className="form-input" placeholder="e.g. Priya Sharma" value={form.full_name} onChange={e=>setForm(f=>({...f,full_name:e.target.value}))} required />

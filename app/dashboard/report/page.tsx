@@ -286,7 +286,7 @@ export default function ReportPage() {
           </div>
 
           {/* Report Preview */}
-          <div style={{ display:'grid',gridTemplateColumns:'1fr 320px',gap:24,marginBottom:24 }}>
+          <div className="grid-responsive-sidebar" style={{ marginBottom: 24 }}>
             <div className="card">
               <div style={{ background:'linear-gradient(135deg, #0D1B3E, #162447)', padding:'32px 36px', borderRadius:'var(--radius-lg) var(--radius-lg) 0 0' }}>
                 <div style={{ display:'flex',justifyContent:'space-between',alignItems:'flex-start' }}>
@@ -348,7 +348,7 @@ export default function ReportPage() {
           <div className="card">
             <div className="card-header"><div className="card-title"><Download size={16} color="#0E8C8C" /> Export Options</div></div>
             <div className="card-body">
-              <div style={{ display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:16 }}>
+              <div className="grid-responsive-2">
                 {exportOptions.map(opt => (
                   <div key={opt.id} style={{ border:`1px solid ${opt.border}`,background:opt.bg,borderRadius:12,padding:'20px 22px',display:'flex',gap:16,alignItems:'flex-start' }}>
                     <div style={{ width:44,height:44,borderRadius:10,background:opt.bg,border:`1px solid ${opt.border}`,display:'flex',alignItems:'center',justifyContent:'center',color:opt.color,flexShrink:0 }}>

@@ -154,7 +154,7 @@ export default function DashboardPage() {
                 <p className="card-subtitle" style={{ fontSize: 12, margin: '2px 0 0' }}>Share these credentials with your college students to collect surveys directly.</p>
               </div>
             </div>
-            <div className="card-body" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 24, padding: '20px 24px' }}>
+            <div className="card-body grid-responsive-2fr-1fr" style={{ padding: '20px 24px' }}>
               <div>
                 <div className="form-group" style={{ marginBottom: 0 }}>
                   <label className="form-label" style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5, color: 'var(--text-muted)', marginBottom: 6 }}>
@@ -243,9 +243,9 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 24, marginBottom: 24 }}>
+          <div className="grid-responsive-3" style={{ marginBottom: 24 }}>
             {/* Workshop Demand */}
-            <div className="card" style={{ gridColumn: 'span 2' }}>
+            <div className="card col-span-2">
               <div className="card-header">
                 <div className="card-title"><Zap size={16} color={TEAL} /> Workshop Demand</div>
               </div>
@@ -289,7 +289,7 @@ export default function DashboardPage() {
           </div>
 
           {/* AI Insights + Activity */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+          <div className="grid-responsive-2">
             <div className="insights-panel">
               <div className="insights-header">
                 <Brain size={20} color="#14B8A6" />

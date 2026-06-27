@@ -124,7 +124,7 @@ export default function AnalyticsPage() {
         <div className="page-content">
 
           {/* Research Readiness Index */}
-          <div style={{ display:'grid', gridTemplateColumns:'340px 1fr', gap:24, marginBottom:24 }}>
+          <div className="grid-responsive-sidebar-inverse" style={{ marginBottom: 24 }}>
             <div className="card">
               <div className="card-header"><div className="card-title"><Brain size={16} color="#0E8C8C" /> Research Readiness Index</div></div>
               <div className="card-body">

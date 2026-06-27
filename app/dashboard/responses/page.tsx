@@ -72,7 +72,7 @@ export default function ResponsesPage() {
             </select>
           </div>
 
-          <div style={{ display:'grid', gridTemplateColumns:selected?'1fr 380px':'1fr', gap:24 }}>
+          <div className={selected ? "grid-responsive-sidebar" : ""} style={{ display: selected ? "grid" : "block", gap: 24 }}>
             <div className="data-table-wrap">
               <table className="data-table">
                 <thead>
@@ -131,7 +131,7 @@ export default function ResponsesPage() {
                 <div className="card-body" style={{ display:'flex',flexDirection:'column',gap:16 }}>
                   <div>
                     <div style={{ fontSize:11,fontWeight:700,color:'var(--text-muted)',textTransform:'uppercase',letterSpacing:0.8,marginBottom:6 }}>Student Info</div>
-                    <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:8 }}>
+                    <div className="grid-responsive-2" style={{ gap: 8 }}>
                       {[['Department',selected.student_department],['Year',selected.student_year],['Gender',selected.student_gender],['Career',selected.career_goal]].map(([k,v]) => (
                         <div key={k}>
                           <div style={{ fontSize:11,color:'var(--text-muted)' }}>{k}</div>

@@ -270,7 +270,7 @@ export default function AdminReportsPage() {
           <div className="card" style={{ marginBottom: 24 }}>
             <div className="card-header"><div className="card-title"><Globe size={16} color="#0E8C8C" /> Bulk Downloads</div></div>
             <div className="card-body">
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 16 }}>
+              <div className="grid-responsive-3">
                 {bulkOptions.map(opt => (
                   <div key={opt.id} style={{ border: '1px solid var(--border)', background: opt.bg, borderRadius: 12, padding: '20px 22px', display: 'flex', flexDirection: 'column', gap: 12 }}>
                     <div style={{ width: 40, height: 40, borderRadius: 10, background: opt.bg, border: `1px solid ${opt.color}33`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: opt.color }}>

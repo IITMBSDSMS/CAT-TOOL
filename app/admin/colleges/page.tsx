@@ -85,7 +85,7 @@ export default function CollegesPage() {
                   <button className="btn btn-ghost btn-sm" onClick={() => setShowAdd(false)} style={{ marginLeft:'auto',fontWeight:700,padding:'4px 8px' }}>✕</button>
                 </div>
                 <form className="card-body" onSubmit={handleAdd} style={{ display:'flex',flexDirection:'column',gap:0 }}>
-                  <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0 20px' }}>
+                  <div className="grid-responsive-2" style={{ gap: '0 20px' }}>
                     <div className="form-group" style={{ gridColumn:'span 2' }}>
                       <label className="form-label">College Name <span className="required">*</span></label>
                       <input id="college-name" className="form-input" placeholder="e.g. IIT Bombay" value={form.name} onChange={e => setForm(f=>({...f,name:e.target.value}))} required />

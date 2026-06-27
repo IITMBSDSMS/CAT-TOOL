@@ -109,7 +109,7 @@ export default function PartnershipsPage() {
                   <button className="btn btn-ghost btn-sm" onClick={()=>setShowAdd(false)} style={{ marginLeft:'auto',fontWeight:700,padding:'4px 8px' }}>✕</button>
                 </div>
                 <form className="card-body" onSubmit={handleAdd}>
-                  <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0 20px' }}>
+                  <div className="grid-responsive-2" style={{ gap: '0 20px' }}>
                     <div className="form-group" style={{ gridColumn:'span 2' }}>
                       <label className="form-label">Organization Name <span className="required">*</span></label>
                       <input id="partner-name" className="form-input" placeholder="e.g. AIIMS Delhi" value={form.name} onChange={e=>setForm(f=>({...f,name:e.target.value}))} required />

@@ -82,7 +82,7 @@ export default function NotificationsPage() {
           </div>
 
           {/* Stats */}
-          <div style={{ display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:16,marginBottom:24 }}>
+          <div className="grid-responsive-4" style={{ marginBottom: 24 }}>
             {[{label:'Total Sent',value:notifs.length,color:'#0E8C8C'},{label:'Unread',value:notifs.filter(n=>!n.read).length,color:'#2563EB'},{label:'This Week',value:3,color:'#059669'},{label:'Ambassadors Reached',value:10000,color:'#D97706'}].map(s=>(
               <div key={s.label} style={{ background:'var(--bg-card)',border:'1px solid var(--border)',borderRadius:'var(--radius-lg)',padding:'20px 22px' }}>
                 <div style={{ fontSize:30,fontWeight:900,color:s.color,letterSpacing:-1 }}>{typeof s.value==='number'&&s.value>999?'10K+':s.value}</div>
@@ -114,7 +114,7 @@ export default function NotificationsPage() {
                       <label className="form-label">Message <span className="required">*</span></label>
                       <textarea id="notif-message" className="form-textarea" style={{ minHeight:100 }} placeholder="Write your announcement..." value={form.message} onChange={e=>setForm(f=>({...f,message:e.target.value}))} required />
                     </div>
-                    <div style={{ display:'grid',gridTemplateColumns:'1fr 1fr',gap:'0 20px' }}>
+                    <div className="grid-responsive-2" style={{ gap: '0 20px' }}>
                       <div className="form-group">
                         <label className="form-label">Type</label>
                         <select id="notif-type" className="form-select" value={form.type} onChange={e=>setForm(f=>({...f,type:e.target.value}))}>

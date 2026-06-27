@@ -103,7 +103,7 @@ export default function AdminAnalyticsPage() {
             <p className="page-subtitle">Aggregated insights across all {colleges.length} colleges</p>
           </div>
 
-          <div className="kpi-grid" style={{ gridTemplateColumns: 'repeat(4,1fr)', marginBottom: 28 }}>
+          <div className="kpi-grid">
             <KPICard label="Total Responses" value={responses.length} icon={<BookOpen size={20} />} iconBg="rgba(14,140,140,0.10)" iconColor="#0E8C8C" trend={12} delay={0} />
             <KPICard label="National Readiness" value={readiness.score} suffix="/100" icon={<Brain size={20} />} iconBg="rgba(124,58,237,0.10)" iconColor="#7C3AED" trend={5} delay={100} />
             <KPICard label="Colleges Active" value={colleges.length} icon={<Building2 size={20} />} iconBg="rgba(37,99,235,0.10)" iconColor="#2563EB" trend={3} delay={200} />
