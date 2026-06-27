@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { supabase, isDemoMode } from '@/lib/supabase';
+import logoImg from '@/public/healix-official-logo.png';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -248,7 +249,7 @@ export default function LoginPage() {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             boxShadow: '0 8px 32px rgba(0,0,0,0.4)', padding: 4, flexShrink: 0
           }}>
-            <Image src="/healix-official-logo.png" alt="Healix" width={48} height={48} style={{ objectFit: 'contain' }} />
+            <Image src={logoImg} alt="Healix" width={48} height={48} style={{ objectFit: 'contain' }} />
           </div>
           <div style={{ textAlign: 'left' }}>
             <div style={{ fontSize: 20, fontWeight: 900, color: 'white', letterSpacing: '-0.3px', lineHeight: 1.1 }}>Healix Technologies</div>

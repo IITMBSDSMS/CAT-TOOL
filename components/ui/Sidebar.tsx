@@ -1,6 +1,7 @@
 'use client';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
+import logoImg from '@/public/healix-official-logo.png';
 import {
   LayoutDashboard, FileText, BarChart3, Download, Bell,
   Users, Building2, Globe, Settings, LogOut, ChevronRight,
@@ -67,7 +68,7 @@ export default function Sidebar({ role, user }: SidebarProps) {
     <aside className="sidebar">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
         <a className="sidebar-logo" href="#" style={{ flex: 1 }}>
-          <Image src="/healix-official-logo.png" alt="Healix" width={36} height={36} style={{ objectFit: 'contain' }} />
+          <Image src={logoImg} alt="Healix" width={36} height={36} style={{ objectFit: 'contain' }} />
           <div className="sidebar-logo-text">
             <span className="sidebar-logo-name">Healix Technologies</span>
             <span className="sidebar-logo-sub">Pvt. Ltd.</span>
